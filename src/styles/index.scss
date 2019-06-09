@@ -9,8 +9,12 @@ body {
 
 .wrapper{
   padding: 10px;
+  color: #333;
+  font-size: 16px;
   .navi{
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
     a{
       display: inline-block;
       padding: 10px 30px;
@@ -28,7 +32,7 @@ body {
     }
   }
   .content{
-
+    @import "./home";
     @import "./tree";
     @import "./table";
   }

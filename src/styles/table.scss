@@ -1,0 +1,25 @@
+.table{
+  button{
+    padding: 5px 10px;
+    border: none;
+    background: #006367;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+  }
+  .table-data{
+    margin-top: 10px;
+    .line{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+      &:first-child{
+        background: #eee;
+        .name{
+          border-right: 1px solid #ddd;
+        }
+      }
+    }
+  }
+}

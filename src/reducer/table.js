@@ -1,4 +1,4 @@
-import {INIT_TABLE} from "../actions/table";
+import {INIT_TABLE,ADD_TABLE_DATA} from "../actions/table";
 
 const tableReducer = (state, action) => {
     if (!state) {
@@ -10,8 +10,11 @@ const tableReducer = (state, action) => {
         case INIT_TABLE:
             return Object.assign({}, state, {
                 tableData: action.data
-            })
-            break;
+            });
+        case ADD_TABLE_DATA:
+            return Object.assign({}, state, {
+                tableData: [...state.tableData, action.data]
+            });
         default:
             return state;
     }

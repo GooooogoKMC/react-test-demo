@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
-import {BrowserRouter, NavLink, Route} from 'react-router-dom'
+import {BrowserRouter, NavLink, Route} from 'react-router-dom';
+import Home from '../components/Home';
+import Table from '../containers/Table';
+import Tree from '../containers/Tree';
 
 class App extends Component {
     render() {
@@ -12,9 +15,9 @@ class App extends Component {
                         <NavLink to='/table' activeClassName="active">Table</NavLink>
                     </div>
                     <div className="content">
-                        <Route exact path='/' component={() => (<div>Home</div>)}></Route>
-                        <Route path='/tree' component={() => (<div>1</div>)}></Route>
-                        <Route path='/table' component={() => (<div>2</div>)}></Route>
+                        <Route exact path='/' component={Home}></Route>
+                        <Route path='/tree' component={Tree}></Route>
+                        <Route path='/table' component={Table}></Route>
                     </div>
                 </BrowserRouter>
             </div>

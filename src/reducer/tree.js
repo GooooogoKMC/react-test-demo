@@ -9,9 +9,8 @@ const treeReducer = (state, action) => {
     switch (action.type) {
         case INIT_TREE:
             return Object.assign({}, state, {
-                treeData: action.data
+                treeData: [...state.treeData,action.data]
             })
-            break;
         default:
             return state;
 
